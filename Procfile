@@ -1,0 +1,1 @@
+web: py mmbot.py APIKEY VK_LOGIN VK_PASS

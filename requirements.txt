@@ -1,0 +1,4 @@
+pyTelegramBotAPI==3.7.9
+requests==2.25.1
+urllib3==1.26.5
+vkaudiotoken==0.5.1
