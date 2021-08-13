@@ -81,7 +81,10 @@ def get_text_messages(message):
                 duration = track['duration']
                 url = getMp3FromM3u8(track['url'])
                 file = urllib.request.urlopen(url)
-                bot.send_audio(message.from_user.id, file, duration=duration, title=title, performer=artist)
+                try:
+                    bot.send_audio(message.from_user.id, file, duration=duration, title=title, performer=artist)
+                except:
+                     bot.send_message(message.from_user.id, "Ошибка загрузки {}".format(title))
         except:
              bot.send_message(message.from_user.id, "Ошибка исполнения")
 
